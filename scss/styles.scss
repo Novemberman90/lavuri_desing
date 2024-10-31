@@ -1,0 +1,128 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding-top: 20px; 
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+  }
+}
+.menu {
+  &__inner {
+    display: flex;
+  }
+  &__btn {
+    display: none;
+    background-color: transparent;
+    border: 0;
+    width: 44px;
+    height: 44px;
+    padding: 11px 5px;
+    position: relative;
+    span {
+      width: 33px;
+      height: 3.67px;
+      background-color: $accent1;
+      border-radius: 10px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 33px;
+      height: 3.67px;
+      background-color: $accent1;
+      left: 6px;
+      border-radius: 10px;
+    }
+    &::before {
+      top: 11px;
+    }
+    &::after {
+      bottom: 11px;
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    & + .menu__item {
+      margin-left: 45px;
+    }
+  }
+  &__link {
+   @extend %openSans-400;
+   color: $black;
+   line-height: 22px;
+  }
+}
+.user-nav {
+  display: flex;
+  align-items: center;
+  &__link {
+    display: block;
+    padding: 16px 22px 16px 56px;
+    background-color: $accent1;
+    @extend %interMedium-500;
+    font-size: 16px;
+    color: $white;
+    margin-left: 40px;
+    margin-right: 46px;
+    border-radius: 32px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icon/phone.svg');
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 22px;
+    }
+  }
+  &__box {
+    color: $grey;
+    @extend %interMedium-500;
+    font-size: 16px;
+    line-height: 19px;
+    span {
+      padding: 0 2px;
+    }
+  }
+  &__lang {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    &--ua {
+      color: $accent1;
+    }
+    &--ru {
+      color: $grey;
+    }
+  }
+}
+
+
+
+
+
+
+@import 'media';

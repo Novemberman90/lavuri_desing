@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: #1d1d1d;
+}
+.main {
+  flex-grow: 1;
+}
+.container {
+  max-width: 1560px;
+  padding: 0 20px;
+  margin: 0 auto;
+}

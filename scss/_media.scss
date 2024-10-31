@@ -1,0 +1,122 @@
+@media (max-width: 1350px) {
+  .menu {
+    &__item {
+      &+.menu__item {
+        margin-left: 25px;
+      }
+    }
+  }
+  .user-nav {
+    &__link {
+      margin: 0 20px;
+    }
+  }
+}
+@media (max-width: 1160px) {
+  .menu {
+    &__item {
+      &+.menu__item {
+        margin-left: 10px;
+      }
+    }
+    &__link {
+      font-size: 15px;
+    }
+  }
+  .user-nav {
+    &__link {
+      margin-left: 15px;
+      margin-right: 10px;
+      font-size: 15px;
+      padding: 12px 22px 12px 46px;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .menu {
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.menu__btn--active {
+        transition: all .3s;
+        &::before,
+        &::after {
+          left: 50%;
+          transition: all .3s;
+        }
+
+        &::before {
+          top: 18px;
+          transform: translateX(-50%) rotate(45deg); 
+        }
+        &::after {
+          bottom: 22px;
+          transform: translateX(-50%) rotate(-45deg);
+        }
+        span {
+          width: 0;
+          transition: all .3s;
+        }
+      }
+    }
+    &__inner {
+      background-color: $white;
+      transform: translateY(-300%);
+      position: absolute;
+      left: 0;
+      right: 0;
+      padding: 0 20px;
+      flex-direction: column;
+      align-items: center;
+      z-index: 9;
+      transition: all .3s;
+      &.menu__inner--active {
+        padding-top: 45px;
+        padding-bottom: 20px;
+        transform: translateY(0%);
+        transition: all .3s;
+      }
+    }
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+    }
+    &__item {
+      border-bottom: 1px solid $grey;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      width: 100%;
+      text-align: center;
+      & + .menu__item {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      font-size: 16px;
+    }
+  }
+  .user-nav {
+    margin-top: 50px;
+    flex-direction: column-reverse;
+    &__box {
+      margin-bottom: 30px;
+    }
+    &__link {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+}
+@media (max-width: 430px) {
+  .menu {
+    &__link {
+      font-size: 20px;
+      line-height: 27px;
+    }
+  }
+}
