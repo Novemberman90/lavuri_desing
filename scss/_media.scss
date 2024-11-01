@@ -113,3 +113,17 @@
     }
   }
 }
+@media (max-width: 430px) {
+  .menu {
+    &__item {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  .user-nav {
+    margin-top: 25px;
+    &__box {
+      margin-bottom: 25px;
+    }
+  }
+}

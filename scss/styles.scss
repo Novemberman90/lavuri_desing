@@ -70,6 +70,9 @@
    @extend %openSans-400;
    color: $black;
    line-height: 22px;
+   &:hover {
+    color: $accent1;
+   }
   }
 }
 .user-nav {
@@ -96,6 +99,13 @@
       transform: translateY(-50%);
       left: 22px;
     }
+    &:hover {
+      background-color: $accent1-Bold;
+    }
+    &:active,
+    &:focus-visible {
+      background-color: $pasive;
+    }
   }
   &__box {
     color: $grey;
@@ -111,11 +121,133 @@
     background-color: transparent;
     border: none;
     padding: 0;
-    &--ua {
+    color: $grey;
+    &:hover {
       color: $accent1;
     }
-    &--ru {
-      color: $grey;
+    &.user-nav__lang-active {
+      color: $accent1;
+    }
+  }
+}
+.footer {
+  background-color: $accent1;
+  padding: 60px 0 100px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__logo-img {
+    width: 237px;
+    height: auto;
+    object-fit: cover;
+  }
+  &__logo-link {
+    @extend %openSans-400;
+    line-height: 1.6;
+    color: $white;
+    display: inline-block;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 632px;
+    width: 100%;
+  }
+  &__nav-item {
+    margin-bottom: 18px;
+    & + .footer__nav-item {
+      margin-bottom: 10px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__nav-title,
+  &__contact-title {
+    @extend %openSans-700;
+    font-size: 22px;
+    line-height: 1.1;
+    color: $white;
+  }
+  &__nav-link {
+    @extend %openSans-400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    display: inline-block; 
+    &:hover {
+      color: $black;
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-direction: column;
+  }
+  &__contact-box {
+    margin-bottom: auto;
+  }
+  &__contact-title {
+    margin-bottom: 18px;
+  }
+  &__contact-link {
+    display: block;
+    @extend %openSans-600;
+    font-size: 20px;
+    line-height: 1.6;
+    color: $white;
+    padding-left: 28px;
+    position: relative;
+    & +.footer__contact-link {
+      margin-top: 6px;
+    }
+    &:hover {
+      color: $black;
+    }
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--tel {
+      &::before {
+        background-image: url('../images/icon/phone.svg');
+        width: 18px;
+        height: 18px;
+      }
+    }
+    &--email {
+      &::before {
+        background-image: url('../images/icon/letter.svg');
+        width: 20px;
+        height: 16px;
+      }
+    }
+  }
+  &__social-box {
+    display: flex;
+    align-items: center;
+  }
+  &__social-link {
+    display: inline-block;
+    svg {
+      path {
+        fill: $white
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: $black
+        }
+      }
     }
   }
 }
