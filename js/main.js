@@ -31,7 +31,6 @@ document.body.addEventListener('click', (e) =>{
       setWrapperSize: true,
       updateOnWindowResize: true,
       pagination: true,
-      freeMode: true,
       loop: true,
       navigation: {
         nextEl: ".works__btn-next",
