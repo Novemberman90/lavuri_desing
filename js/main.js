@@ -25,13 +25,44 @@ document.body.addEventListener('click', (e) =>{
   {closeMenu()}
 });
 
-   let swiper = new Swiper(".swiper", {
+   let swiper = new Swiper(".works__slider", {
       slidesPerView: 5,
       spaceBetween: 20,
       setWrapperSize: true,
       updateOnWindowResize: true,
+      pagination: true,
+      freeMode: true,
+      loop: true,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".works__btn-next",
+        prevEl: ".works__btn-prev",
       },
+       pagination: {
+        el: ".works__slider-pagination",
+        clickable: true,
+        dynamicBullets: false,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1.7,
+          spaceBetween: 10,
+          centeredSlides: true,
+          freeMode: false,
+        },
+        578: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 480px
+        680: {
+          slidesPerView: 3,
+        },
+        850: {
+          slidesPerView: 4,
+        },
+        // when window width is >= 640px
+        1160: {
+          slidesPerView: 5,
+        }
+      }
     });
