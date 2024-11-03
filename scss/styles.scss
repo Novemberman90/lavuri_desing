@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
   }
   &__logo {
     display: block;
@@ -641,6 +642,102 @@
     color: $grey;
   }
 }
+.stages {
+  padding-top: 160px;
+  &__inner {
+    background-image: url('../images/content/conteiner-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 148px 120px;
+    border-radius: 32px;
+  }
+  &__title-box {
+    background-image: url('../images/content/stage-title.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto;
+    padding: 10px 17px 10px;
+    width: fit-content;
+    margin: 0 auto 40px auto;
+  }
+  &__title {
+    @extend %openSans-700;
+    font-size: 38px;
+    line-height: 1.3;
+    color: $white;
+    text-align: center;
+  }
+  ol.stages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    counter-reset: number;
+    margin-bottom: 30px;
+  }
+  &__item {
+    list-style-type: none;
+    padding: 36px 56px 36px 172px;
+    background-color: $white;
+    border-radius: 32px;
+    position: relative;
+    max-width: 622px;
+    width: 100%;
+    &::before {
+      counter-increment: number;
+      content: "0" counter(number);
+      position: absolute;
+      left: 56px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #F9F9F9;
+      @extend %openSans-800;
+      line-height: 1;
+      font-size: 70px;
+    }
+  }
+  &__item-title {
+    @extend %openSans-700;
+    font-size: 22px;
+    line-height: 1.1;
+    color: $accent1;
+  }
+  &__item-text {
+    @extend %openSans-400;
+    line-height: 1.6;
+    color: $grey;
+  }
+  &__btn {
+    width: 100%;
+    @extend %interMedium-500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white;
+    border-radius: 32px;
+    padding: 22px 38px 22px 38px;
+    border: none;
+    background-color: $accent1;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icon/arrow.svg');
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: auto;
+      margin-left: 5px;
+    }
+    &:hover {
+      background-color: $accent1-Bold;
+    }
 
+    &:active,
+    &:focus-visible {
+      background-color: $pasive;
+    }
+  }
+}
 
 @import 'media';
