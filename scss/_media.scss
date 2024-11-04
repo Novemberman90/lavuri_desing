@@ -95,6 +95,18 @@
       font-size: 16px;
     }
   }
+  .dnwork {
+    &__content {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    &__content-title {
+      font-size: 18px;
+    }
+    &__content-text {
+      font-size: 14px;
+    }
+  }
 }
 @media (max-width: 1160px) {
   .menu {
@@ -277,20 +289,29 @@
       font-size: 14px;
     }
   }
-.review {
-  &__promo {
-    padding: 0;
-    background-color: #fff;
+  .review {
+    &__promo {
+      padding: 0;
+      background-color: #fff;
+    }
+    &__promo-link-desc {
+      display: none;
+    }
+    &__promo-link-mob {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-  &__promo-link-desc {
-    display: none;
+  .dnwork {
+    &__content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__content-title {
+      font-size: 15px;
+    }
   }
-  &__promo-link-mob {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 }
 @media (max-width: 850px) {
   .hero {
@@ -351,6 +372,28 @@
   .material {
     &__inner {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .dnwork {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+    &__item {
+      max-width: 100%;
+    }
+    &__content {
+      padding: 34px 24px 34px 24px;
+      background-color: #F9F9F9;
+    }
+
+    &__content-title {
+      font-size: 18px;
+    }
+    &__content-text {
+      font-size: 14px;
     }
   }
 }
@@ -458,7 +501,8 @@
     }
   }
   .whyus,
-  .review {
+  .review,
+  .dnwork {
     &__title {
       font-size: 30px;
       margin-bottom: 30px;
@@ -590,6 +634,15 @@
       background-repeat: no-repeat;
     }
   }
+  .dnwork {
+    padding-bottom: 100px;
+    &__inner {
+      gap: 10px;
+    }
+    &__content-title {
+      margin-bottom: 10px;
+    }
+  }
 }
 @media (max-width: 430px) {
   .menu {
@@ -665,5 +718,13 @@
    &__promo-link-mob {
     padding: 14px;
    }
+  }
+  .dnwork {
+    &__content {
+      padding: 20px;
+    }
+    &__content-title {
+      font-size: 16px;
+    }
   }
 }
