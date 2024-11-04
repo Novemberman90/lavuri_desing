@@ -25,7 +25,52 @@ document.body.addEventListener('click', (e) =>{
   {closeMenu()}
 });
 
-   let swiper = new Swiper(".works__slider", {
+   let reviewSlider = new Swiper(".review__slider", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      setWrapperSize: true,
+      updateOnWindowResize: true,
+      pagination: true,
+      loop: true,
+      navigation: {
+        nextEl: ".review__btn-next",
+        prevEl: ".review__btn-prev",
+      },
+       pagination: {
+        el: ".review__slider-pagination",
+        clickable: true,
+        dynamicBullets: false,
+      },
+      breakpoints: {
+        // when window width is >= 320px
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 5,
+          centeredSlides: true,
+          freeMode: false,
+        },
+        410: {
+          slidesPerView: 1.2,
+          spaceBetween: 10,
+        },
+   /*      430: {
+          slidesPerView: 1.5,
+        }, */
+        578: {
+          slidesPerView: 2,
+        },
+        // when window width is >= 480px
+        680: {
+          slidesPerView: 3,
+        },
+        850: {
+          slidesPerView: 4,
+        },
+        // when window width is >= 640px
+      }
+    });
+
+   let worksSlider = new Swiper(".works__slider", {
       slidesPerView: 5,
       spaceBetween: 20,
       setWrapperSize: true,
