@@ -1,3 +1,4 @@
+window.addEventListener('DOMContentLoaded', ()=>{
 const menuBtn = document.querySelector('.menu__btn');
 const mobilMenu = document.querySelector('.menu__inner');
 
@@ -24,6 +25,33 @@ document.body.addEventListener('click', (e) =>{
   )
   {closeMenu()}
 });
+
+const scrollLinks = document.querySelectorAll('.menu__link');
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = link.getAttribute('href');
+      const targetElemetn = document.querySelector(targetId);
+
+      if(targetElemetn)  {
+        // Вычисляем позицию прокрутки с учётом высоты шапки
+        const headerHeight = document.querySelector('header').offsetHeight;
+
+       const top = targetElemetn.getBoundingClientRect().top + window.scrollY - headerHeight;
+       // Плавный скролл к целевому элементу
+       window.scrollTo({
+         top: top,
+         behavior: "smooth"
+       });
+         // Удаляем классы активности из меню
+         closeMenu()
+      }
+    })
+  });
+
+
+
 
 let reviewSlider = new Swiper(".review__slider", {
     slidesPerView: 4,
@@ -114,12 +142,14 @@ let worksSlider = new Swiper(".works__slider", {
 const fileInput = document.querySelector('#fileInput');
 const fileNameDisplay = document.querySelector('.send__file-name');
 
-fileInput.addEventListener("change", function(params) {
-  if ( fileInput.files.length > 0 ) {
-    fileNameDisplay.textContent = fileInput.files[0].name;
-    fileNameDisplay.classList.add('send__file-name--selected');
-  } else {
-    fileNameDisplay.textContent =  "Файл не выбран";
-    fileNameDisplay.classList.remove('send__file-name--selected');
-  }
+  fileInput.addEventListener("change", function(params) {
+    if ( fileInput.files.length > 0 ) {
+      fileNameDisplay.textContent = fileInput.files[0].name;
+      fileNameDisplay.classList.add('send__file-name--selected');
+    } else {
+      fileNameDisplay.textContent =  "Файл не выбран";
+      fileNameDisplay.classList.remove('send__file-name--selected');
+    }
+  });
 });
+
