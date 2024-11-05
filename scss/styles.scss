@@ -1002,4 +1002,201 @@
       color: $grey-accent;
   }
 }
+.send {
+  background-image: url('../images/content/send-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &__inner {
+  padding: 59px 0;
+  width: 693px;
+  }
+  &__img-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+  &__title {
+    @extend %openSans-700;
+    font-size: 38px;
+    line-height: 1.3;
+    color: $white;
+    margin-bottom: 5px;
+  }
+  &__subtitle {
+    @extend %openSans-400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $white;
+    margin-bottom: 40px;
+  }
+  &__form {
+    max-width: 493px;
+    width: 100%;
+    position: relative; 
+  }
+  &__label-name,
+  &__label-phone {
+    display: block;
+    margin-bottom: 10px;
+    input {
+      width: 100%;
+      border: none;
+      background-color: $white;
+      padding: 18px 30px 18px 30px;
+      border-radius: 16px;
+      outline: none;
+      @extend %openSans-400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: $black;
+      &::placeholder {
+        @extend %openSans-400;
+        font-size: 16px;
+        line-height: 1.6;
+        color: $grey;
+      }
+    }
+  }
+  &__file-input {
+   @extend %checkbox-hidden;
+  }
+  &__label-file {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__file-button {
+    display: inline-flex;
+    justify-content: center;
+    width: 108px;
+    height: 60px;
+    border-radius: 16px;
+    background-color: $white;
+    position: relative;
+    padding: 18px 54px 18px 54px;
+    &::before {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icon/load-default.svg');
+      width: 26px;
+      height: 23px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &:hover,
+    &:active,
+    &:focus-visible {
+      background-color: $grey;
+    }
+  }
+  &__file-name {
+    display: inline-block;
+    width: 365px;
+    height: 60px;
+    @extend %openSans-400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $grey;
+    background-color: $white;
+    padding: 18px 30px 18px 30px;
+    border-radius: 16px;
+    &--selected {
+      color: $black;
+    }
+  }
+  &__textarea {
+    width: 100%;
+    height: 171px;
+    padding: 18px 30px 18px 30px;
+    border-radius: 16px;
+    @extend %openSans-400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $black;
+    resize: none;
+    outline: none;
+    border: none;
+    margin-bottom: 30px;
+    &::placeholder {
+      @extend %openSans-400;
+      font-size: 16px;
+      line-height: 1.6;
+      color: $grey;
+    }
+  }
+  &__label-checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 17px;
+  }
+  &__checkbox {
+    @extend %checkbox-hidden;
+    &:checked + .send__checkbox-style {
+      position: absolute;
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icon/check-on.svg');
+      left: 15px;
+      top: 6px;
+    }
+  }
+  &__checkbox-style {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/icon/check-off.svg');
+    left: 15px;
+    top:6px;
+  }
+  &__checkbox-text {
+    @extend %openSans-400;
+    line-height: 1.6;
+    color: $white;
+    padding-left: 51px;
+  }
+  &__form-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 22px 38px 22px 38px;
+    background-color: $accent1;
+    border-radius: 32px;
+    @extend %interMedium-500;
+    line-height: 19px;
+    color: $white;
+    border: none;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../images/icon/arrow.svg');
+      width: 24px;
+      height: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: auto;
+      margin-left: 5px;
+    }
+  
+    &:hover {
+      background-color: $accent1-Bold;
+    }
+  
+    &:active,
+    &:focus-visible {
+      background-color: $pasive;
+    }
+  }
+}
 @import 'media';

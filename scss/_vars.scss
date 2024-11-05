@@ -30,3 +30,12 @@ $grey-accent: #6D6D6D;
   font-family: 'Inter-Medium';
   font-weight: 500;
 }
+
+ %checkbox-hidden,
+ %radio-hidden {
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   position: absolute;
+ }
