@@ -428,6 +428,9 @@
     &__inner {
       grid-template-columns: repeat(2, 1fr);
     }
+    &__img {
+      height: 157px;
+    }
   }
   .dnwork {
     &__inner {
@@ -654,11 +657,6 @@
     }
   }
   .material {
-    &__inner {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
-  .material {
     padding: 100px 0;
     &__title {
       font-size: 30px;
@@ -852,6 +850,13 @@
    &__promo-link-mob {
     padding: 14px;
    }
+  }
+  .material {
+    &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   .dnwork {
     &__content {
