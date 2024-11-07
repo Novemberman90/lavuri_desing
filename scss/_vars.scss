@@ -39,3 +39,8 @@ $grey-accent: #6D6D6D;
    clip: rect(0 0 0 0);
    position: absolute;
  }
+ %uppercase{
+  &::first-letter {
+    text-transform: uppercase;
+  }
+ }

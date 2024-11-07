@@ -1,4 +1,58 @@
 window.addEventListener('DOMContentLoaded', ()=>{
+
+const select = document.querySelector('.user-nav__box');
+const aproveLang = ['ua','ru']
+  select.addEventListener('click', changeURLLanguage);
+
+  function changeURLLanguage(event) {
+    if (event.target.classList.contains('user-nav__lang')) {
+      const language = event.target.getAttribute('data-lang'); // Получаем значение "ua" или "ru"
+      
+      // Удаляем класс "active" у всех кнопок 
+      document.querySelectorAll('.user-nav__lang').forEach(btn => {
+        btn.classList.remove('user-nav__lang-active');
+      });
+      // Добавляем класс "active" у нажатой кнопки
+      event.target.classList.add('user-nav__lang-active');
+
+       // Обновляем URL с новым языковым кодом
+      location.href = `${window.location.pathname}#${language}`;
+       console.log(`Выбран ${language}`);
+       location.reload(); 
+    }
+  }
+  function changeLanguage() {
+    let hash = window.location.hash;
+    hash = hash.substring(1);
+    console.log(hash);
+    if(!aproveLang.includes(hash)) {
+      location.href = `${window.location.pathname}#ua`;
+      location.reload();
+    }
+
+    // Устанавливаем активное значение
+    document.querySelectorAll('.user-nav__lang').forEach(btn => {
+      if (btn.getAttribute('data-lang') === hash) {
+        btn.classList.add('user-nav__lang-active');
+      }
+    });
+
+     // Обновляем контент страницы
+    /*  document.querySelector('.hero__title').innerHTML = langArr['hero-title'][hash]; */
+     
+     for (let key in langArr) {
+        let elem = document.querySelector('.lng-' + key);
+        if (elem) {
+            elem.innerHTML = langArr[key][hash];
+        }
+     }
+  }
+  changeLanguage();
+
+
+
+
+
 const menuBtn = document.querySelector('.menu__btn');
 const mobilMenu = document.querySelector('.menu__inner');
 
