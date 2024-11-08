@@ -2,7 +2,7 @@ const langArr = {
 
   "menu__link-works" : {
     "ua": "наші роботи",
-    "ru": "нашы работи",
+    "ru": "наши работи",
   },
   "menu__link-whyus" : {
     "ua": "переваги",
@@ -10,11 +10,11 @@ const langArr = {
   },
   "menu__link-works" : {
     "ua": "наші роботи",
-    "ru": "нашы работи",
+    "ru": "наши работи",
   },
   "menu__link-stages" : {
     "ua": "етапи",
-    "ru": "этапи",
+    "ru": "этапы",
   },
   "menu__link-material" : {
     "ua": "матеріали",
@@ -24,7 +24,7 @@ const langArr = {
     "ua": "ТаБу",
     "ru": "ТаБу",
   },
-  "menu__menu__link-send" : {
+  "menu__link-send" : {
     "ua": "вартість",
     "ru": "стоимость",
   },
