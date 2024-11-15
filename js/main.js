@@ -185,6 +185,7 @@ let worksSlider = new Swiper(".works__slider", {
     },
     850: {
       slidesPerView: 4,
+      spaceBetween: 20,
     },
     // when window width is >= 640px
     1160: {

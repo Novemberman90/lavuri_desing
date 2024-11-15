@@ -513,6 +513,11 @@
     height: 5px;
     background-color: $accent1;
   }
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
   &__slider-pagination {
     display: flex;
     align-items: center;
@@ -616,6 +621,8 @@
     padding: 20px 34px 20px 130px;
     position: relative;
     width: 100%;
+    background-color: #F9F9F9;
+    border-radius: 32px;
     margin-bottom: 20px;
     &::before {
       position: absolute;
@@ -1303,6 +1310,7 @@
     width: 100%;
     margin-bottom: 20px;
     background-color: #F9F9F9;
+    border-radius: 32px;
 
     &::before {
       position: absolute;
