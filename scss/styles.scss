@@ -144,7 +144,6 @@
   &__logo-block {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     .social-list {
       display: none;
     }
@@ -153,6 +152,7 @@
     width: 237px;
     height: auto;
     object-fit: cover;
+    margin-bottom: auto;
   }
   &__logo-link {
     @extend %openSans-400;

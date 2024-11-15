@@ -238,14 +238,14 @@ body {
     justify-content: space-between; }
   .footer__logo-block {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
+    flex-direction: column; }
     .footer__logo-block .social-list {
       display: none; }
   .footer__logo-img {
     width: 237px;
     height: auto;
-    object-fit: cover; }
+    object-fit: cover;
+    margin-bottom: auto; }
   .footer__logo-link {
     line-height: 1.6;
     color: #ffffff;
