@@ -570,7 +570,7 @@
   }
 }
 .whyus {
-  padding: 20px 0 40px;
+  padding: 20px 0 100px;
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -662,7 +662,7 @@
   }
 }
 .stages {
-  padding-top: 160px;
+  padding: 60px 0 100px;
   &__inner {
     background-image: url('../images/content/conteiner-bg.jpg');
     background-position: center;
@@ -763,7 +763,7 @@
   }
 }
 .material {
-  padding: 140px 0;
+  padding: 40px 0 100px;
   &__title {
     @extend %openSans-700;
     font-size: 38px;
@@ -1030,11 +1030,15 @@
   }
 }
 .send {
-  background-image: url('../images/content/send-bg.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
+  padding-bottom: 60px;
+  &__wrapper {
+    background-image: url('../images/content/send-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+  }
   &__inner {
   padding: 59px 0;
   width: 693px;
@@ -1235,9 +1239,9 @@
   }
 }
 .opt {
-  padding: 140px 0 140px;
+  padding: 82px 0 140px;
   background-image: url('../images/content/otp-bg.svg');
-  background-position: center 58px;
+  background-position: center -2px;
   background-repeat: no-repeat;
   background-size: auto;
   &__inner {

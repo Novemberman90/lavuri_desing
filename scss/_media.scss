@@ -504,7 +504,9 @@
     }
   }
   .send {
-    position: static;
+    &__wrapper {
+      position: static;
+    }
     &__inner {
       position: relative;
     }
@@ -612,7 +614,7 @@
     }
   }
   .dnwork {
-    padding-top: 100px;
+    padding-top: 60px;
   }
   .stages {
     padding-top: 0;

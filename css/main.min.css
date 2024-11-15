@@ -514,7 +514,7 @@ body {
       fill: #FFC177; }
 
 .whyus {
-  padding: 20px 0 40px; }
+  padding: 20px 0 100px; }
   .whyus__inner {
     display: flex;
     justify-content: space-between;
@@ -576,7 +576,7 @@ body {
     color: #D7D7D7; }
 
 .stages {
-  padding-top: 160px; }
+  padding: 60px 0 100px; }
   .stages__inner {
     background-image: url("../images/content/conteiner-bg.jpg");
     background-position: center;
@@ -654,7 +654,7 @@ body {
       background-color: #FFC177; }
 
 .material {
-  padding: 140px 0; }
+  padding: 40px 0 100px; }
   .material__title {
     font-size: 38px;
     line-height: 1.3;
@@ -819,11 +819,13 @@ body {
     color: #6D6D6D; }
 
 .send {
-  background-image: url("../images/content/send-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative; }
+  padding-bottom: 60px; }
+  .send__wrapper {
+    background-image: url("../images/content/send-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; }
   .send__inner {
     padding: 59px 0;
     width: 693px; }
@@ -974,9 +976,9 @@ body {
       background-color: #FFC177; }
 
 .opt {
-  padding: 140px 0 140px;
+  padding: 82px 0 140px;
   background-image: url("../images/content/otp-bg.svg");
-  background-position: center 58px;
+  background-position: center -2px;
   background-repeat: no-repeat;
   background-size: auto; }
   .opt__inner {
@@ -1394,18 +1396,18 @@ body {
   .review__btn {
     display: none; }
 
-  .send {
+  .send__wrapper {
     position: static; }
-    .send__inner {
-      position: relative; }
-    .send__img-box {
-      display: block;
-      position: relative;
-      top: 55px; }
-      .send__img-box img {
-        margin: 0 auto; }
-    .send__subtitle {
-      margin-bottom: 0; } }
+  .send__inner {
+    position: relative; }
+  .send__img-box {
+    display: block;
+    position: relative;
+    top: 55px; }
+    .send__img-box img {
+      margin: 0 auto; }
+  .send__subtitle {
+    margin-bottom: 0; } }
 @media (max-width: 680px) {
   .hero__title {
     font-size: 50px; }
@@ -1467,7 +1469,7 @@ body {
     margin-bottom: 30px; }
 
   .dnwork {
-    padding-top: 100px; }
+    padding-top: 60px; }
 
   .stages {
     padding-top: 0; }
